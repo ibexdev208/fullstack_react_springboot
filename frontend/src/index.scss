@@ -1,0 +1,24 @@
+// Override default variables before the import
+// $body-bg: #000;
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import "./variables/scssVariables.scss";
+
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding:0;
+  height:100%;
+  font-family: var(--font-family-sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: var(--code);
+}

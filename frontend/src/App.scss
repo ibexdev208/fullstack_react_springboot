@@ -1,0 +1,172 @@
+// Override default variables before the import
+// $body-bg: #000;
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import "./variables/scssVariables.scss";
+
+.App {
+	width: 100%;
+	min-height: 100%;
+	position:relative;
+}
+
+h1 {
+  color: #999;
+}
+
+.banner {
+	height: 150px !important;
+	width: 100%;
+	margin: 0;
+	top: 0;
+	background-image: url('./banner_bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: fixed;
+	z-index: 3;
+}
+
+nav {
+	width: 100%;
+	margin-top: 50px;
+	padding: 0;
+	text-align: center;
+	transform: translateY(100px);
+	border-bottom: 1px solid #fff;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+} 
+ 
+ul li {
+	display: inline-block;
+	margin: 10px 5px;
+}
+
+nav a {
+	list-style-type: none;
+	text-decoration: none;
+}
+
+nav a:link, nav a:active, nav a:visited {
+	color: #333;
+} 
+
+#h1 {
+	width: 50%;
+	font-size: 2rem;
+	transform: translateY(30px);
+	margin-left: 45%;
+	opacity: 0.3;
+	color: black;
+} 
+
+h3 {
+	color: #999;
+}
+
+.brand {
+	// padding: 3%;
+	text-align: center;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	transform: translateY(-30px);
+	margin-left: 10px;
+	border: 1px solid #fff;
+}
+
+#logo {
+	font-size: 3.3rem;
+	// margin-left: 20%;
+	filter: drop-shadow(-5mm 2mm 4mm black);
+	opacity: 0.3;
+}
+
+#logo a:active, #logo a:visited, #logo a:link {
+	color: #222;
+}
+
+#logo a:link {
+	text-decoration: none; 
+}
+
+.mainArea {
+	padding-bottom: 40px;
+}
+
+.mainBody {
+	background-color: coral;
+	min-height: 330px;
+}
+
+.homeArea, .dbArea, .javaArea, .monitorsArea, .newMonitorArea, .editArea, .webArea {
+	width: 100%;
+	margin-top: 110px;
+	text-align: center;
+	min-height: 70vh;
+	height: auto;
+}
+
+.table {
+	margin-left: 25%;
+	max-width: 320px;
+}
+
+.table tr:nth-child(even){
+	background-color:rgba(153, 153, 153, 0.08);
+}
+
+.table input {
+	border: 0;
+	padding-left: 10px;
+}
+
+.table tr td {
+	padding: 5px 10px;
+	border: 0;
+}
+
+.table tfoot tr button{
+	float: right;
+}
+
+#submit {
+	width: 80%;
+	margin: 20px 10%;
+}
+
+footer {
+	position:absolute;
+   	bottom:0;
+   	width:100%;
+	height:40px;
+	padding-top: 10px;
+	text-align: center;
+	background-color: var(--white);
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: var(--breakpoint-md)) {
+	.body {
+		background-color: coral;
+	}	
+}
