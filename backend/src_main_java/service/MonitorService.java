@@ -1,4 +1,7 @@
 package app.mysql.service;
+/* The service layer holds the app’s business logic.
+ * Spring Data JPA generates an instance of MonitorDao at runtime then inject it to the instance 
+ * of MonitorService class. */
 
 import java.util.List;
 
@@ -8,10 +11,13 @@ import org.springframework.stereotype.Service;
 import app.mysql.dao.MonitorDao;
 import app.mysql.entity.Monitor;
 import app.mysql.exception.MonitorNotFoundException;
-
+/* The @Service annotation specifies that it is a business class, 
+ * spring adds it into the application context. The service layer sits above the JPA repository and 
+ * handles the app's business details*/
 @Service
 public class MonitorService {
 
+	//the @Autowired annotation injects an instance of MonitorDao via a private field.
 	@Autowired
 	private MonitorDao monitorDao;
 

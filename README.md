@@ -28,4 +28,60 @@ Subsequently navigate to: &nbsp;
 
 > http://localhost:8080 &nbsp;
 
-In order to visualise the project in the browser both from and backend have to be running from their respective ports.
+In order to visualise the project in the browser both front and backend must be running from their respective ports.
+
+This project was developed with JDK 8 and Maven.
+
+The Application contains the following:
+- An SQL Database
+- An Application Properties
+- An Entity Model Class
+- An Dao Interface
+- A Service Class
+- A Spring MVC Controller Class
+- An Application Class
+- Handling exceptions
+
+End Points:
+
+- Retrieve a list of all products
+- Add a new product
+- Edit an existing product
+- Remove an exiting product
+
+
+## Create a table, insert and query it
+USE products_DB;
+CREATE TABLE monitor (
+`id` INT(11) NOT NULL AUTO_INCREMENT,
+`brand` VARCHAR(45) NOT NULL,
+`resolution` INT(4) NOT NULL,
+`model` VARCHAR(8) NOT NULL,
+`price` FLOAT(6) NOT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+USE products_DB;
+INSERT INTO monitor VALUES (1000, 'Dell', 1080, 'SE2216H', 89.99);
+INSERT INTO monitor VALUES (1001, 'Samsung', 1280, 'S2721HGF', 328.49);
+
+mysql> desc monitor;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| id         | int         | NO   | PRI | NULL    | auto_increment |
+| brand      | varchar(45) | NO   |     | NULL    |                |
+| resolution | int         | NO   |     | NULL    |                |
+| model      | varchar(8)  | NO   |     | NULL    |                |
+| price      | float       | NO   |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+
+mysql> SELECT * FROM monitor;
++------+---------+------------+----------+--------+
+| id   | brand   | resolution | model    | price  |
++------+---------+------------+----------+--------+
+| 1000 | Dell    |       1080 | SE2216H  |  89.99 |
+| 1001 | Samsung |       1280 | S2721HGF | 328.49 |
++------+---------+------------+----------+--------+
+
+

@@ -1,4 +1,8 @@
 package app.mysql.controller;
+/*
+ * The controller as the name implies handles all API’s payloads requested by clients, 
+ * it is part of the Spring MVC.
+ * The MonitorService's instance is also injected through the private @Autowired annotation*/
 
 import java.util.List;
 
@@ -18,7 +22,9 @@ import app.mysql.service.MonitorService;
 
 //The CrossOrigin allows requests from specific origins
 @CrossOrigin("http://localhost:3000")
+//This annotation is an amalgamation of @CResponseBody and @Controller to create a RESTful API.
 @RestController
+//@RequestMapping(“/api”) maps HTTP requests to a handler method, in this instance the base route will be http://localhost:8080/api
 @RequestMapping(path="/api")
 public class MonitorController {
 
