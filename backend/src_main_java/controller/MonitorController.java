@@ -1,8 +1,8 @@
 package app.mysql.controller;
 /*
- * The controller as the name implies handles all API’s payloads requested by clients, 
+ * The controller as the name implies handles all API’s payloads requested by the client, 
  * it is part of the Spring MVC.
- * The MonitorService's instance is also injected through the private @Autowired annotation*/
+ * The MonitorService instance is also injected through the private @Autowired annotation*/
 
 import java.util.List;
 
